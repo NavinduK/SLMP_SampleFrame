@@ -133,16 +133,16 @@ namespace SLMP_SampleFrame.Services
         // ===============================
         public void TestW4000BitSequence()
         {
-            int address = 4000;
+            int address = 1000;
             Console.WriteLine("=== Step 1: Read all bits ===");
             ushort before = ReadSingleW(address);
             PrintBits(before, address);
 
-            Console.WriteLine("\n=== Step 2: Write W4000.0 = ON ===");
-            WriteSingleWBit(address, 0, true);
+            // Console.WriteLine("\n=== Step 2: Write W1000.0 = ON ===");
+            // WriteSingleWBit(address, 0, true);
 
-            ushort afterOn = ReadSingleW(address);
-            PrintBits(afterOn, address);
+            // ushort afterOn = ReadSingleW(address);
+            // PrintBits(afterOn, address);
 
             // Console.WriteLine("\n=== Step 3: Write W4000.0 = OFF ===");
             // WriteSingleWBit(address, 0, false);

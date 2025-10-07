@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SLMP_SampleFrame")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+52b48148698dc0b5bac4af9f3db40daeeb89cc67")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4bcfb59a07945139f2c41b6901a0abb32823e1e8")]
 [assembly: System.Reflection.AssemblyProductAttribute("SLMP_SampleFrame")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SLMP_SampleFrame")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

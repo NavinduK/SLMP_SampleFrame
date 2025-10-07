@@ -23,8 +23,11 @@ namespace SLMP_SampleFrame
                 plcConnection.Connect(ipAddress, 6000);
                 Console.WriteLine("Connected.\n");
 
+                // Run full W4000 test sequence
+                plcReader.TestW4000BitSequence();
+
                 // Test D4000 instead of W4000
-                plcReaderD.TestD4000BitSequence();
+                // plcReaderD.TestD4000BitSequence();
                 
                 // Optional: Monitor D4000 for changes
                 // Console.WriteLine("\nPress 'M' to monitor D4000 continuously, or any other key to exit...");
