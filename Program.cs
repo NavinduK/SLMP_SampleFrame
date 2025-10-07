@@ -15,16 +15,24 @@ namespace SLMP_SampleFrame
 
             var plcConnection = new PlcConnection();
             var plcReader = new PlcReader(plcConnection);
+            var plcReaderD = new PlcReaderD(plcConnection);
 
             try
             {
                 Console.WriteLine($"Connecting to PLC at {ipAddress}:6000\n");
                 plcConnection.Connect(ipAddress, 6000);
-                Console.WriteLine("Connected. Testing communication...\n");
+                Console.WriteLine("Connected.\n");
 
-                // 🔹 Analyze W4000 bit by bit
-                Console.WriteLine("=== Analyzing W4000 Bits ===");
-                plcReader.AnalyzeW4000Bits();
+                // Test D4000 instead of W4000
+                plcReaderD.TestD4000BitSequence();
+                
+                // Optional: Monitor D4000 for changes
+                // Console.WriteLine("\nPress 'M' to monitor D4000 continuously, or any other key to exit...");
+                // var key = Console.ReadKey();
+                // if (key.KeyChar == 'M' || key.KeyChar == 'm')
+                // {
+                //     plcReaderD.MonitorD4000();
+                // }
             }
             catch (Exception ex)
             {
