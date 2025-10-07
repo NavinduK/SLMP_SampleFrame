@@ -1,0 +1,14 @@
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/bin/Debug/net8.0/SLMP_SampleFrame
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/bin/Debug/net8.0/SLMP_SampleFrame.deps.json
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/bin/Debug/net8.0/SLMP_SampleFrame.runtimeconfig.json
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/bin/Debug/net8.0/SLMP_SampleFrame.dll
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/bin/Debug/net8.0/SLMP_SampleFrame.pdb
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.GeneratedMSBuildEditorConfig.editorconfig
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.AssemblyInfoInputs.cache
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.AssemblyInfo.cs
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.csproj.CoreCompileInputs.cache
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.dll
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/refint/SLMP_SampleFrame.dll
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.pdb
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.genruntimeconfig.cache
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/ref/SLMP_SampleFrame.dll
