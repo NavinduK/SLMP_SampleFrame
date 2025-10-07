@@ -12,3 +12,4 @@
 /Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.pdb
 /Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.genruntimeconfig.cache
 /Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/ref/SLMP_SampleFrame.dll
+/Users/navindukavishka/Documents/Mirai/SLMP_SampleFrame/obj/Debug/net8.0/SLMP_SampleFrame.sourcelink.json
