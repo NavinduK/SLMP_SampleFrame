@@ -14,7 +14,7 @@ namespace SLMP_SampleFrame
             IPAddress ipAddress = new IPAddress(byAdres);
 
             var plcConnection = new PlcConnection();
-            var plcReader = new PlcReader(plcConnection);
+            var plcReaderW = new PlcReaderW(plcConnection);
             var plcReaderD = new PlcReaderD(plcConnection);
 
             try
@@ -23,19 +23,15 @@ namespace SLMP_SampleFrame
                 plcConnection.Connect(ipAddress, 6000);
                 Console.WriteLine("Connected.\n");
 
-                // Run full W4000 test sequence
-                plcReader.TestW4000BitSequence();
+                // plcReaderW.TestWBitSequence();
+                // plcReaderD.TestDBitSequence();
 
-                // Test D4000 instead of W4000
-                // plcReaderD.TestD4000BitSequence();
-                
-                // Optional: Monitor D4000 for changes
-                // Console.WriteLine("\nPress 'M' to monitor D4000 continuously, or any other key to exit...");
-                // var key = Console.ReadKey();
-                // if (key.KeyChar == 'M' || key.KeyChar == 'm')
-                // {
-                //     plcReaderD.MonitorD4000();
-                // }
+                for (int i = 0; i < 30; i++)
+                {
+                    plcReaderW.TestWBitSequence();
+                    // plcReaderD.TestDBitSequence();
+                    System.Threading.Thread.Sleep(500);
+                }
             }
             catch (Exception ex)
             {

@@ -129,85 +129,26 @@ namespace SLMP_SampleFrame.Services
         }
 
         // ===============================
-        // Full test sequence for D4000
+        // Full test sequence for D
         // ===============================
-        public void TestD4000BitSequence()
+        public void TestDBitSequence()
         {
             int address = 4000;
-            Console.WriteLine("=== Step 1: Read all bits from D4000 ===");
+            Console.WriteLine("=== Step 1: Read all bits from D" + address + " ===");
             ushort before = ReadSingleD(address);
             PrintBits(before, address);
 
-            // Console.WriteLine("\n=== Step 2: Write D4000.0 = ON ===");
+            // Console.WriteLine("\n=== Step 2: Write D" + address + ".0 = ON ===");
             // WriteSingleDBit(address, 0, true);
 
             // ushort afterOn = ReadSingleD(address);
             // PrintBits(afterOn, address);
 
-            // Console.WriteLine("\n=== Step 3: Write D4000.0 = OFF ===");
+            // Console.WriteLine("\n=== Step 3: Write D" + address + ".0 = OFF ===");
             // WriteSingleDBit(address, 0, false);
 
             // ushort afterOff = ReadSingleD(address);
             // PrintBits(afterOff, address);
-        }
-
-        // ===============================
-        // Continuously monitor D4000 for changes
-        // ===============================
-        public void MonitorD4000()
-        {
-            Console.WriteLine("=== Monitoring D4000 for Real-Time Changes ===");
-            Console.WriteLine("Watching D4000 every second. Press any key to stop...");
-            
-            ushort lastValue = 0;
-            int secondsCount = 0;
-            
-            while (!Console.KeyAvailable)
-            {
-                try
-                {
-                    ushort currentValue = ReadSingleD(4000);
-                    secondsCount++;
-                    
-                    if (currentValue != lastValue)
-                    {
-                        Console.WriteLine($"\n*** CHANGE DETECTED at {secondsCount}s! ***");
-                        Console.WriteLine($"D4000 changed from {lastValue:X4} ({lastValue}) to {currentValue:X4} ({currentValue})");
-                        
-                        // Show which bits changed
-                        for (int bit = 0; bit < 16; bit++)
-                        {
-                            bool oldBit = ((lastValue >> bit) & 1) == 1;
-                            bool newBit = ((currentValue >> bit) & 1) == 1;
-                            
-                            if (oldBit != newBit)
-                            {
-                                Console.WriteLine($"  Bit {bit:D2}: {(oldBit ? "ON " : "OFF")} → {(newBit ? "ON " : "OFF")} {(newBit ? "*** ON ***" : "")}");
-                            }
-                        }
-                        
-                        lastValue = currentValue;
-                    }
-                    else
-                    {
-                        // Show current status every 5 seconds
-                        if (secondsCount % 5 == 0)
-                        {
-                            Console.WriteLine($"[{secondsCount:D3}s] D4000: {currentValue:X4} ({currentValue}) - No changes");
-                        }
-                    }
-                    
-                    System.Threading.Thread.Sleep(1000); // Check every second
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine($"Error reading D4000: {ex.Message}");
-                    System.Threading.Thread.Sleep(1000);
-                }
-            }
-            
-            Console.ReadKey(); // Clear the key press
-            Console.WriteLine("\nMonitoring stopped.");
         }
     }
 }

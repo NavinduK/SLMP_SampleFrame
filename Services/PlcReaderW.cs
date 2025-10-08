@@ -3,11 +3,11 @@ using System.Net.Sockets;
 
 namespace SLMP_SampleFrame.Services
 {
-    public class PlcReader : PlcConnection
+    public class PlcReaderW : PlcConnection
     {
         private readonly PlcConnection _connection;
 
-        public PlcReader(PlcConnection connection)
+        public PlcReaderW(PlcConnection connection)
         {
             _connection = connection;
         }
@@ -131,20 +131,20 @@ namespace SLMP_SampleFrame.Services
         // ===============================
         // Full test sequence
         // ===============================
-        public void TestW4000BitSequence()
+        public void TestWBitSequence()
         {
             int address = 1000;
-            Console.WriteLine("=== Step 1: Read all bits ===");
+            Console.WriteLine("=== Step 1: Read all bits from W" + address + " ===");
             ushort before = ReadSingleW(address);
             PrintBits(before, address);
 
-            // Console.WriteLine("\n=== Step 2: Write W1000.0 = ON ===");
+            // Console.WriteLine("\n=== Step 2: Write W" + address + ".0= ON ===");
             // WriteSingleWBit(address, 0, true);
 
             // ushort afterOn = ReadSingleW(address);
             // PrintBits(afterOn, address);
 
-            // Console.WriteLine("\n=== Step 3: Write W4000.0 = OFF ===");
+            // Console.WriteLine("\n=== Step 3: Write W" + address + ".0= OFF ===");
             // WriteSingleWBit(address, 0, false);
 
             // ushort afterOff = ReadSingleW(address);
